@@ -1,0 +1,26 @@
+# Site configuration. baseURL is overridden by the GitHub Actions workflow
+# at deploy time, so the placeholder here only affects local preview.
+baseURL = 'https://example.org/'
+locale = 'en-US'
+title = 'My Blog'
+enableRobotsTXT = true
+
+# No tags/categories for now; delete this line to enable them.
+disableKinds = ['taxonomy', 'term']
+
+[params]
+description = 'A blog.'
+
+[pagination]
+pagerSize = 10
+
+[menus]
+[[menus.main]]
+name = 'Posts'
+pageRef = '/posts'
+weight = 10
+
+[[menus.main]]
+name = 'About'
+pageRef = '/about'
+weight = 20
