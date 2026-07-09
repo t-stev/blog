@@ -7,7 +7,9 @@
     {{ end }}
   </header>
   {{- $align := index .Params "ink-align" -}}
-  <div{{ with $align }}{{ if ne . "left" }} class="align-{{ . }}"{{ end }}{{ end }}>
+  {{- $font := index .Params "ink-font" -}}
+  {{- if eq $font "default" }}{{ $font = "" }}{{ end -}}
+  <div{{ with $align }}{{ if ne . "left" }} class="align-{{ . }}"{{ end }}{{ end }}{{ with $font }} style="{{ printf "font-family: '%s', Georgia, serif" . | safeCSS }}"{{ end }}>
     {{ .Content }}
   </div>
 </article>
