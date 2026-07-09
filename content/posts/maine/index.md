@@ -9,7 +9,7 @@ Looking NE from Steamer Dock, Bustins Island, 2026
 
 ![1.00](DSCF7128.jpg)
 
-Town Dock Fish, Bustins Island, 2026
+Town Dock Minnows, Bustins Island, 2026
 
 ![1.00](DSCF7187.jpg)
 
