@@ -5,17 +5,11 @@ locale = 'en-US'
 title = 'Teo Steverlynck-Horne'
 enableRobotsTXT = true
 
-# No tags/categories for now; delete this line to enable them.
-disableKinds = ['taxonomy', 'term']
+# No tags/categories or section list pages; the homepage is the archive.
+disableKinds = ['taxonomy', 'term', 'section']
 
 [params]
 description = 'A blog.'
 
 [pagination]
 pagerSize = 10
-
-[menus]
-[[menus.main]]
-name = 'Posts'
-pageRef = '/posts'
-weight = 10
