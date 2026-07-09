@@ -1,0 +1,15 @@
+{{- /* Long-side photo sizing (matches Ink's editor): big landscapes span
+     the column, big portraits take two-thirds of it, both centered.
+     Dimensions come from the page-bundle resource; Ink publishes images
+     with EXIF rotation baked in, so Width/Height are trustworthy. */ -}}
+{{- $img := .Page.Resources.GetMatch .Destination -}}
+{{- $class := "" -}}
+{{- if $img -}}
+  {{- if ge (math.Max $img.Width $img.Height) 700 -}}
+    {{- $class = cond (gt $img.Height $img.Width) "portrait" "landscape" -}}
+  {{- end -}}
+{{- end -}}
+{{- /* Ink stores its aspect ratio in the alt slot ("1.00") — drop those */ -}}
+{{- $alt := .Text -}}
+{{- if findRE `^\d+(\.\d+)?$` $alt -}}{{- $alt = "" -}}{{- end -}}
+<img src="{{ .Destination | safeURL }}" alt="{{ $alt }}"{{ with $class }} class="{{ . }}"{{ end }} loading="lazy">

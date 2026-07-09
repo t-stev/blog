@@ -124,6 +124,20 @@ img {
   height: auto;
 }
 
+/* Long-side photo sizing (classes from the image render hook): landscapes
+   span the column, portraits take two-thirds, both centered. */
+img.landscape {
+  display: block;
+  margin-inline: auto;
+  width: 100%;
+}
+
+img.portrait {
+  display: block;
+  margin-inline: auto;
+  width: 66%;
+}
+
 .site-footer {
   margin-top: 4rem;
   padding-top: 1rem;
