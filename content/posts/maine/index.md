@@ -5,22 +5,24 @@ date: 2026-07-09
 
 ![1.00](DSCF7111.jpg)
 
-<br />
+Looking North from Steamer Dock, Bustins Island, 2026
 
 ![1.00](DSCF7128.jpg)
 
-<br />
+Town Dock Fish, Bustins Island, 2026
 
 ![1.00](DSCF7187.jpg)
 
-<br />
+Quinn tending fire, Little Whaleboat Island, 2026
 
 ![1.00](DSCF7208.jpg)
 
-<br />
+Black Boat, Little Whaleboat Island, 2026
 
 ![1.00](DSCF7245.jpg)
 
-<br />
+Looking toward Harpswell, Little Whaleboat Island, 2026
 
 ![1.00](DSCF7333.jpg)
+
+Long exposure of campfire, facing East, Little Whaleboat Island, 2026
