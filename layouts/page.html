@@ -6,6 +6,9 @@
     <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
     {{ end }}
   </header>
-  {{ .Content }}
+  {{- $align := index .Params "ink-align" -}}
+  <div{{ with $align }}{{ if ne . "left" }} class="align-{{ . }}"{{ end }}{{ end }}>
+    {{ .Content }}
+  </div>
 </article>
 {{ end }}

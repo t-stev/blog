@@ -138,6 +138,36 @@ img.portrait {
   width: 66%;
 }
 
+/* Markdown tables (default browser tables are unreadable) */
+table {
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  width: 100%;
+}
+
+th,
+td {
+  border: 1px solid var(--border);
+  padding: 0.4rem 0.75rem;
+  text-align: left;
+}
+
+th {
+  font-weight: 600;
+  background: color-mix(in srgb, var(--border), transparent 60%);
+}
+
+/* Document alignment from Ink's ink-align front matter */
+.align-center { text-align: center; }
+.align-right { text-align: right; }
+.align-justify { text-align: justify; }
+
+.align-center pre,
+.align-right pre,
+.align-justify pre {
+  text-align: left;
+}
+
 .site-footer {
   margin-top: 4rem;
   padding-top: 1rem;
