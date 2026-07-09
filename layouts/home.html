@@ -3,7 +3,6 @@
   {{ .Content }}
 </section>
 
-<h2>Recent posts</h2>
 <ul class="post-list">
   {{ range first 5 (where site.RegularPages "Section" "posts") }}
   <li>

@@ -12,4 +12,22 @@
 {{- /* Ink stores its aspect ratio in the alt slot ("1.00") — drop those */ -}}
 {{- $alt := .Text -}}
 {{- if findRE `^\d+(\.\d+)?$` $alt -}}{{- $alt = "" -}}{{- end -}}
-<img src="{{ .Destination | safeURL }}" alt="{{ $alt }}"{{ with $class }} class="{{ . }}"{{ end }} loading="lazy">
+{{- if $img -}}
+  {{- /* Build-time responsive sizes: browsers pick the smallest sufficient
+       copy. The original is the largest candidate and the src fallback. */ -}}
+  {{- $srcset := slice -}}
+  {{- range $w := slice 480 800 1200 -}}
+    {{- if lt $w $img.Width -}}
+      {{- $r := $img.Resize (printf "%dx q80" $w) -}}
+      {{- $srcset = $srcset | append (printf "%s %dw" $r.RelPermalink $w) -}}
+    {{- end -}}
+  {{- end -}}
+  {{- $srcset = $srcset | append (printf "%s %dw" $img.RelPermalink $img.Width) -}}
+  {{- /* Text column is 42rem (~672px); portraits render at 66% of it */ -}}
+  {{- $sizes := cond (eq $class "portrait") "(max-width: 720px) 66vw, 444px" "(max-width: 720px) 100vw, 672px" -}}
+<img src="{{ $img.RelPermalink }}" srcset="{{ delimit $srcset ", " }}" sizes="{{ $sizes }}"
+  width="{{ $img.Width }}" height="{{ $img.Height }}"
+  alt="{{ $alt }}"{{ with $class }} class="{{ . }}"{{ end }} loading="lazy">
+{{- else -}}
+<img src="{{ .Destination | safeURL }}" alt="{{ $alt }}" loading="lazy">
+{{- end -}}

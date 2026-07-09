@@ -1,9 +1,9 @@
 :root {
-  --bg: #ffffff;
-  --fg: #1a1a1a;
-  --muted: #6b6b6b;
+  --bg: #faf8f4;
+  --fg: #1c1a17;
+  --muted: #716a5e;
   --accent: #166534;
-  --border: #e3e3e3;
+  --border: #e6e1d6;
   --serif: "Charter", "Bitstream Charter", "Iowan Old Style", "Sitka Text",
     Cambria, Georgia, serif;
   --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
@@ -12,11 +12,11 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg: #16181d;
-    --fg: #e6e6e6;
-    --muted: #9a9a9a;
+    --bg: #191713;
+    --fg: #e9e5dc;
+    --muted: #9d968a;
     --accent: #86efac;
-    --border: #2e3138;
+    --border: #322e27;
   }
 }
 
@@ -56,9 +56,13 @@ a:hover {
 }
 
 .site-title {
-  font-size: 1.25rem;
-  font-weight: 700;
+  font-size: 1rem;
+  font-weight: 600;
   color: var(--fg);
+}
+
+::selection {
+  background: color-mix(in srgb, var(--accent) 25%, transparent);
 }
 
 .site-header nav a {
@@ -74,14 +78,55 @@ h1, h2, h3 {
   line-height: 1.25;
 }
 
-article header h1 {
-  margin-bottom: 0.25rem;
+article header {
+  margin: 2.5rem 0;
 }
 
+article header h1 {
+  font-size: 2.5rem;
+  line-height: 1.1;
+  letter-spacing: -0.015em;
+  margin: 0;
+}
+
+/* Date kicker above the title, magazine-style */
 article header time {
+  display: block;
   font-family: var(--sans);
   color: var(--muted);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.75rem;
+}
+
+/* Body links: quiet green underline instead of colored text */
+article a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: color-mix(in srgb, var(--accent) 60%, transparent);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+article a:hover {
+  color: var(--accent);
+  text-decoration-color: var(--accent);
+}
+
+/* Photo finishing: soft corners and a hairline edge (shadow, so no
+   layout shift), with the following paragraph styled as a caption */
+article img {
+  border-radius: 3px;
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--fg) 8%, transparent);
+}
+
+article p:has(> img) + p {
   font-size: 0.875rem;
+  font-style: italic;
+  color: var(--muted);
+  text-align: center;
+  margin-top: 0.25rem;
 }
 
 .post-list {
@@ -93,7 +138,17 @@ article header time {
   display: flex;
   gap: 1rem;
   align-items: baseline;
-  padding: 0.4rem 0;
+  padding: 0.5rem 0;
+}
+
+.post-list a {
+  color: var(--fg);
+  font-size: 1.1875rem;
+}
+
+.post-list a:hover {
+  color: var(--accent);
+  text-decoration: none;
 }
 
 .post-list time {
@@ -101,7 +156,9 @@ article header time {
   flex-shrink: 0;
   width: 7rem;
   color: var(--muted);
-  font-size: 0.875rem;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
   font-variant-numeric: tabular-nums;
 }
 
