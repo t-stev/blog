@@ -2,8 +2,12 @@
   --bg: #ffffff;
   --fg: #1a1a1a;
   --muted: #6b6b6b;
-  --accent: #0b57d0;
+  --accent: #166534;
   --border: #e3e3e3;
+  --serif: "Charter", "Bitstream Charter", "Iowan Old Style", "Sitka Text",
+    Cambria, Georgia, serif;
+  --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -11,7 +15,7 @@
     --bg: #16181d;
     --fg: #e6e6e6;
     --muted: #9a9a9a;
-    --accent: #8ab4f8;
+    --accent: #86efac;
     --border: #2e3138;
   }
 }
@@ -24,9 +28,9 @@ body {
   margin: 0 auto;
   padding: 0 1.25rem 3rem;
   max-width: 42rem;
-  font-family: "Times New Roman", "Liberation Serif", Georgia, serif;
-  font-size: 1.0625rem;
-  line-height: 1.65;
+  font-family: var(--serif);
+  font-size: 1.125rem;
+  line-height: 1.7;
   color: var(--fg);
   background: var(--bg);
 }
@@ -41,6 +45,7 @@ a:hover {
 }
 
 .site-header {
+  font-family: var(--sans);
   display: flex;
   align-items: baseline;
   justify-content: space-between;
@@ -74,8 +79,9 @@ article header h1 {
 }
 
 article header time {
+  font-family: var(--sans);
   color: var(--muted);
-  font-size: 0.9375rem;
+  font-size: 0.875rem;
 }
 
 .post-list {
@@ -91,10 +97,11 @@ article header time {
 }
 
 .post-list time {
+  font-family: var(--sans);
   flex-shrink: 0;
   width: 7rem;
   color: var(--muted);
-  font-size: 0.9375rem;
+  font-size: 0.875rem;
   font-variant-numeric: tabular-nums;
 }
 
@@ -167,7 +174,14 @@ th {
   text-align: left;
 }
 
+.comments {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border);
+}
+
 .site-footer {
+  font-family: var(--sans);
   margin-top: 4rem;
   padding-top: 1rem;
   border-top: 1px solid var(--border);
