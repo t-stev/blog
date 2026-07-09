@@ -25,4 +25,4 @@ Looking toward Harpswell, Little Whaleboat Island, 2026
 
 ![1.00](DSCF7333.jpg)
 
-Long exposure of campfire, facing NE, Little Whaleboat Island, 2026
+Long exposure campfire, facing NE, Little Whaleboat Island, 2026
