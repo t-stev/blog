@@ -2,6 +2,7 @@
 title: Maine
 date: 2026-07-09
 ink-align: center
+ink-font: Times New Roman
 ---
 
 ![1.00](DSCF7111.jpg)
