@@ -5,7 +5,7 @@ date: 2026-07-09
 
 ![1.00](DSCF7111.jpg)
 
-Looking North from Steamer Dock, Bustins Island, 2026
+Looking NE from Steamer Dock, Bustins Island, 2026
 
 ![1.00](DSCF7128.jpg)
 
@@ -25,4 +25,4 @@ Looking toward Harpswell, Little Whaleboat Island, 2026
 
 ![1.00](DSCF7333.jpg)
 
-Long exposure of campfire, facing East, Little Whaleboat Island, 2026
+Long exposure of campfire, facing NE, Little Whaleboat Island, 2026
