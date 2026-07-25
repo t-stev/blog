@@ -115,18 +115,10 @@ article a:hover {
 }
 
 /* Photo finishing: soft corners and a hairline edge (shadow, so no
-   layout shift), with the following paragraph styled as a caption */
+   layout shift) */
 article img {
   border-radius: 3px;
   box-shadow: 0 0 0 1px color-mix(in srgb, var(--fg) 8%, transparent);
-}
-
-article p:has(> img) + p {
-  font-size: 0.875rem;
-  font-style: italic;
-  color: var(--muted);
-  text-align: center;
-  margin-top: 0.25rem;
 }
 
 .post-list {
