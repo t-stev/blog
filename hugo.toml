@@ -13,3 +13,7 @@ description = 'A blog.'
 
 [pagination]
 pagerSize = 10
+
+# Ink emits raw HTML (text-align divs) when publishing aligned blocks.
+[markup.goldmark.renderer]
+unsafe = true
